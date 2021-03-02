@@ -50,7 +50,7 @@ function runFilter(event) {
     let filteredData=tableData.filter(record => {
         for (let key in filterObject){
             // partial string comparison - if tableData record value does not include filter value and filter is not Null - returns false , and data is filtered out
-            if ((record[key].toString().includes(filterObject[key].toLowerCase()))==false && filterObject[key]!=null){
+            if ((record[key].toString().toLowerCase().includes(filterObject[key].toLowerCase()))==false && filterObject[key]!=null){
                 return false;
             }          
         }
